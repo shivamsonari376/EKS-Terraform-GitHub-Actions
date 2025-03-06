@@ -1,4 +1,3 @@
-
 variable "aws-region" {}
 variable "env" {}
 variable "cluster-name" {}
@@ -12,6 +11,17 @@ variable "pub-cidr-block" {
 variable "pub-availability-zone" {
   type = list(string)
 }
+<<<<<<< HEAD
+variable "vpc_peering_connection_id" {
+  description = "The ID of the VPC peering connection."
+  type        = string
+}
+variable "peer_vpc_id" {
+  description = "The ID of the VPC that is peered"
+  type        = string
+}
+=======
+>>>>>>> f30b1bc9bcfa9bf3938a614ae6188b444711cd08
 variable "pub-sub-name" {}
 variable "pri-subnet-count" {}
 variable "pri-cidr-block" {
@@ -50,4 +60,3 @@ variable "addons" {
     version = string
   }))
 }
-
