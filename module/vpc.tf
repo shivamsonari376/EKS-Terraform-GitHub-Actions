@@ -123,14 +123,12 @@ resource "aws_route_table" "private-rt" {
     cidr_block     = "0.0.0.0/0"
     nat_gateway_id = aws_nat_gateway.ngw.id
   }
-<<<<<<< HEAD
+
   # Route for VPC Peering Connection
   route {
     cidr_block                = "10.0.0.0/16"  # The CIDR block for the peer VPC
     vpc_peering_connection_id = var.vpc_peering_connection_id
   }
-=======
->>>>>>> f30b1bc9bcfa9bf3938a614ae6188b444711cd08
 
   tags = {
     Name = var.private-rt-name
@@ -151,7 +149,7 @@ resource "aws_route_table_association" "private-rt-association" {
   ]
 }
 
-<<<<<<< HEAD
+
 resource "aws_vpc_peering_connection" "vpc_peering" {
   vpc_id        = aws_vpc.vpc.id            # Your VPC's ID
   peer_vpc_id   = var.peer_vpc_id     # The VPC ID of the peer
@@ -163,8 +161,7 @@ resource "aws_vpc_peering_connection" "vpc_peering" {
   }
 }
 
-=======
->>>>>>> f30b1bc9bcfa9bf3938a614ae6188b444711cd08
+
 resource "aws_security_group" "eks-cluster-sg" {
   name        = var.eks-sg
   description = "Allow 443 from Jump Server only"
