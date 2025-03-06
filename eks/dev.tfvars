@@ -1,4 +1,3 @@
-
 env                   = "dev"
 aws-region            = "us-east-1"
 vpc-cidr-block        = "10.16.0.0/16"
@@ -17,6 +16,11 @@ private-rt-name       = "private-route-table"
 eip-name              = "elasticip-ngw"
 ngw-name              = "ngw"
 eks-sg                = "eks-sg"
+<<<<<<< HEAD
+vpc_peering_connection_id = "pcx-0c8bc723e97c4ddc4"
+peer_vpc_id               = "vpc-09f02049d6176fe30"
+=======
+>>>>>>> f30b1bc9bcfa9bf3938a614ae6188b444711cd08
 
 # EKS
 is-eks-cluster-enabled     = true
@@ -29,9 +33,15 @@ spot_instance_types        = ["c5a.large", "c5a.xlarge", "m5a.large", "m5a.xlarg
 desired_capacity_on_demand = "1"
 min_capacity_on_demand     = "1"
 max_capacity_on_demand     = "5"
+<<<<<<< HEAD
+desired_capacity_spot      = "0"
+min_capacity_spot          = "0"
+max_capacity_spot          = "1"
+=======
 desired_capacity_spot      = "1"
 min_capacity_spot          = "1"
 max_capacity_spot          = "10"
+>>>>>>> f30b1bc9bcfa9bf3938a614ae6188b444711cd08
 addons = [
   {
     name    = "vpc-cni",
@@ -51,4 +61,3 @@ addons = [
   }
   # Add more addons as needed
 ]
-
