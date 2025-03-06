@@ -1,4 +1,3 @@
-
 variable "cluster-name" {}
 variable "cidr-block" {}
 variable "vpc-name" {}
@@ -25,6 +24,21 @@ variable "private-rt-name" {}
 variable "eip-name" {}
 variable "ngw-name" {}
 variable "eks-sg" {}
+<<<<<<< HEAD
+# variables.tf
+
+variable "vpc_peering_connection_id" {
+  description = "ID of the VPC Peering connection"
+  type        = string
+}
+
+variable "peer_vpc_id" {
+  description = "ID of the VPC that is peered"
+  type        = string
+}
+
+=======
+>>>>>>> f30b1bc9bcfa9bf3938a614ae6188b444711cd08
 
 #IAM
 variable "is_eks_role_enabled" {
@@ -53,4 +67,3 @@ variable "max_capacity_on_demand" {}
 variable "desired_capacity_spot" {}
 variable "min_capacity_spot" {}
 variable "max_capacity_spot" {}
-
