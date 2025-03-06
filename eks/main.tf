@@ -24,11 +24,10 @@ module "eks" {
   eip-name              = "${local.env}-${local.org}-${var.eip-name}"
   ngw-name              = "${local.env}-${local.org}-${var.ngw-name}"
   eks-sg                = var.eks-sg
-<<<<<<< HEAD
+
   vpc_peering_connection_id = var.vpc_peering_connection_id
   peer_vpc_id               = var.peer_vpc_id
-=======
->>>>>>> f30b1bc9bcfa9bf3938a614ae6188b444711cd08
+
 
   is_eks_role_enabled           = true
   is_eks_nodegroup_role_enabled = true
@@ -46,8 +45,5 @@ module "eks" {
   endpoint-public-access        = var.endpoint-public-access
 
   addons = var.addons
-<<<<<<< HEAD
 
-=======
->>>>>>> f30b1bc9bcfa9bf3938a614ae6188b444711cd08
 }
