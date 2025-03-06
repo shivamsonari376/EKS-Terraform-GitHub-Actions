@@ -1,4 +1,3 @@
-
 resource "aws_eks_cluster" "eks" {
 
   count    = var.is-eks-cluster-enabled == true ? 1 : 0
@@ -110,4 +109,3 @@ resource "aws_eks_node_group" "spot-node" {
 
   depends_on = [aws_eks_cluster.eks]
 }
-
