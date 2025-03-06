@@ -24,7 +24,7 @@ variable "private-rt-name" {}
 variable "eip-name" {}
 variable "ngw-name" {}
 variable "eks-sg" {}
-<<<<<<< HEAD
+
 # variables.tf
 
 variable "vpc_peering_connection_id" {
@@ -37,8 +37,6 @@ variable "peer_vpc_id" {
   type        = string
 }
 
-=======
->>>>>>> f30b1bc9bcfa9bf3938a614ae6188b444711cd08
 
 #IAM
 variable "is_eks_role_enabled" {
